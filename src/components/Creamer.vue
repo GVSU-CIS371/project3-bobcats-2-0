@@ -1,10 +1,15 @@
 <template>
-  <div class="froth">
-    <div v-for=" in 5" class="foam"></div>
+  <div class="froth" :style="{ backgroundColor: creamerColor }">
+    <div v-for="n in 5" :key="n" class="foam"></div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+  creamerColor: string;
+}>();
+</script>
+
 <style lang="scss" scoped>
 .froth {
   overflow: visible;
