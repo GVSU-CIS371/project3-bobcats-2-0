@@ -12,7 +12,7 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .froth {
-  overflow: visible;
+  overflow: hidden;
   transform: translateY(400%);
   position: relative;
   height: 20%;
