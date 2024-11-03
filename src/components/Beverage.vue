@@ -1,20 +1,28 @@
-<template>
+ <template>
   <Mug>
     <Cold v-if="isIced" />
     <Hot v-else />
     <Contents>
-      <template v-slot:top>
+      
+      <template v-slot:top v-if="creamerColor !== 'transparent' && syrupColor === 'transparent'">
         <Creamer :creamerColor="creamerColor" />
       </template>
-      <template v-slot:mid>
+
+      <template v-slot:top v-if="creamerColor !== 'transparent'">
+        <Creamer :creamerColor="creamerColor" />
+      </template>
+      
+      
+      <template v-slot:mid v-if="syrupColor !== 'transparent'">
         <Syrup :syrupColor="syrupColor" />
       </template>
+
       <template v-slot:bottom>
         <Base :baseColor="baseColor" />
       </template>
     </Contents>
   </Mug>
-</template>
+</template> 
 
 <script setup lang="ts">
 import Contents from "./Contents.vue";

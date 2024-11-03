@@ -38,7 +38,7 @@
               :value="creamer"
               v-model="currentCreamer"
             />
-            {{ creamer }}
+            {{ creamer.name }}
           </label>
         </template>
       </li>
@@ -59,7 +59,7 @@
               :value="syrup"
               v-model="currentSyrup"
             />
-            {{ syrup }}
+            {{ syrup.name }}
           </label>
         </template>
       </li>
@@ -80,7 +80,7 @@
               :value="base"
               v-model="currentBaseBeverage"
             />
-            {{ base }}
+            {{ base.name }}
           </label>
         </template>
       </li>
