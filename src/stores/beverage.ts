@@ -1,4 +1,4 @@
-import { ref, Ref } from "vue";
+import { computed, ref, Ref } from "vue";
 
 interface BaseBeverageType {
   id: string;
@@ -87,9 +87,13 @@ const syrups: Ref<SyrupType[]> = ref([
 const currentTemp = ref(temps.value[1]);
 const currentBaseBeverage = ref(bases.value[0]);
 const currentCreamer = ref(creamers.value[0]);
-const currentSyrup = ref(syrups.value[0]);
+const currentSyrup: Ref<SyrupType> = ref(syrups.value[0]);
+
+// Computed property for currentSyrup color that defaults to base color if syrup ID is 's1'
+const currentSyrupColor = computed(() => {
+  return currentSyrup.value.id === "s1" ? currentBaseBeverage.value.color : currentSyrup.value.color;
+});
 
 export type { BaseBeverageType, CreamerType, SyrupType };
 export { temps, bases, creamers, syrups };
-export { currentTemp };
-export { currentBaseBeverage, currentCreamer, currentSyrup };
+export { currentTemp, currentBaseBeverage, currentCreamer, currentSyrup, currentSyrupColor };

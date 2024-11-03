@@ -17,6 +17,10 @@
         <Syrup :syrupColor="syrupColor" />
       </template>
 
+      <template v-slot:mid v-if="syrupColor === 'transparent'">
+        <Base :baseColor="baseColor" />
+      </template>
+
       <template v-slot:bottom>
         <Base :baseColor="baseColor" />
       </template>

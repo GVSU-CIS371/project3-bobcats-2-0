@@ -3,7 +3,7 @@
     <Beverage 
       :isIced="currentTemp === 'Cold'" 
       :creamerColor="currentCreamer.color" 
-      :syrupColor="currentSyrup.color" 
+      :syrupColor="currentSyrupColor" 
       :baseColor="currentBaseBeverage.color" 
     />
     <ul>
@@ -46,7 +46,7 @@
   </div>
 
   <div>
-    <Syrup :syrupColor="currentSyrup.color"/>
+    <Syrup :syrupColor="currentSyrupColor"/>
     <h3>Select Syrup</h3>
     <ul>
       <li>
@@ -95,7 +95,7 @@ import Syrup from "./components/Syrup.vue"
 import Base from "./components/Base.vue"
 import { temps, currentTemp } from "./stores/beverage";
 import { creamers, syrups, bases } from "./stores/beverage";
-import { currentCreamer, currentSyrup, currentBaseBeverage } from "./stores/beverage";
+import { currentCreamer, currentSyrup, currentBaseBeverage, currentSyrupColor } from "./stores/beverage";
 </script>
 
 <style lang="scss">
