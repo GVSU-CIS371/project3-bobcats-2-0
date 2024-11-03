@@ -85,8 +85,8 @@ const syrups: Ref<SyrupType[]> = ref([
 ]);
 
 const currentTemp = ref(temps.value[1]);
-const currentBaseBeverage = ref(bases.value[0]);
-const currentCreamer = ref(creamers.value[0]);
+const currentBaseBeverage: Ref<BaseBeverageType> = ref(bases.value[0]);
+const currentCreamer: Ref<CreamerType>  = ref(creamers.value[0]);
 const currentSyrup: Ref<SyrupType> = ref(syrups.value[0]);
 
 // Computed property for currentSyrup color that defaults to base color if syrup ID is 's1'
