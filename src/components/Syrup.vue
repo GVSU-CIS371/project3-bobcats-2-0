@@ -3,9 +3,8 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  syrupColor: string;
-}>();
+import { defineProps } from 'vue';
+defineProps<{ syrupColor: string }>();
 </script>
 
 <style lang="scss" scoped>

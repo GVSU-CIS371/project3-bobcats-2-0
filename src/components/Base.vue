@@ -3,9 +3,8 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  baseColor: string;
-}>();
+import { defineProps } from 'vue';
+defineProps<{ baseColor: string }>();
 </script>
 
 <style scoped>

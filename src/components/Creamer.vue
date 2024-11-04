@@ -5,9 +5,8 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  creamerColor: string;
-}>();
+import { defineProps } from 'vue';
+defineProps<{ creamerColor: string }>();
 </script>
 
 <style lang="scss" scoped>
